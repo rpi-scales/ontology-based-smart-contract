@@ -1,1 +1,1 @@
-A Course Selection and a simple voting system smart contract modified from the blockbean2 example. Deploy with Fabric on VSCode.
+A Course Selection and a simple voting system smart contract modified from the blockbean2 example. Deploy by replace the smart contract in the blockbean2 example(https://github.com/IBM/blockchainbean2/blob/master/docs/run-local.md) with this one.
