@@ -7,8 +7,26 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -23,12 +41,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canAddCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canAddCourse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canInitiateVote -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canInitiateVote">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
     </owl:ObjectProperty>
     
 
@@ -38,47 +64,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canVote">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCapacity -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCapacity">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Capacity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCredits -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCredits">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Credits"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasName -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasName">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Name"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasPrerequisite -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasPrerequisite">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Prerequisite"/>
     </owl:ObjectProperty>
     
 
@@ -106,7 +91,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
+    // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -114,11 +99,68 @@
     
 
 
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Capacity -->
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCurrentSize -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Capacity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
-    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCurrentSize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasGPA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasGPA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasMaxCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasMaxCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasRequiredGPA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasRequiredGPA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasRequiredYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasRequiredYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     
 
 
@@ -128,39 +170,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Credits -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Credits">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Name -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Name">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person"/>
-    
-
-
-    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Prerequisite -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Prerequisite">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#CourseAttribute"/>
-    </owl:Class>
     
 
 
@@ -184,6 +196,12 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canAddCourse"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#takesCourse"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
             </owl:Restriction>
@@ -195,21 +213,74 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#course1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#course1">
+        <hasCurrentSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</hasCurrentSize>
+        <hasMaxCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</hasMaxCapacity>
+        <hasRequiredGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</hasRequiredGPA>
+        <hasRequiredYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasRequiredYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.8</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Rules
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#g">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#rg">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#ry">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#mc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#curr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl:var#y">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl:var#z">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -218,36 +289,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -255,10 +297,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#takesCourse"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasGPA"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#g"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -266,13 +308,122 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCapacity"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasYear"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#y"/>
                                     </rdf:Description>
                                 </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasRequiredGPA"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#rg"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasRequiredYear"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#ry"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasMaxCapacity"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#mc"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCurrentSize"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#curr"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#g"/>
+                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#rg"/>
+                                                                                        </swrl:arguments>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#y"/>
+                                                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#ry"/>
+                                                                                                </swrl:arguments>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#curr"/>
+                                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#mc"/>
+                                                                                                        </swrl:arguments>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
                             </rdf:Description>
                         </rdf:rest>
                     </rdf:Description>
@@ -285,9 +436,43 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canInitiateVote"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canAddCourse"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Course"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#c"/>
+                        </swrl:arguments>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -335,33 +520,7 @@
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                     </rdf:Description>
                 </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#takesCourse"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasCapacity"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
         </swrl:body>
         <swrl:head>
@@ -369,10 +528,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canVote"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Person"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -380,111 +538,34 @@
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Student"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#takesCourse"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasPrerequisite"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canVote"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canAddCourse"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#course1"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#Professor"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#teachesCourse"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#hasPrerequisite"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
         </swrl:body>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#canInitiateVote"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/zhaoxingjian/ontologies/2019/5/untitled-ontology-7#s"/>
+                        </swrl:arguments>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
